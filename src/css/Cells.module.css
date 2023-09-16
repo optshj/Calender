@@ -1,0 +1,19 @@
+.cell{
+	display:flex;
+	width:13.5vw;
+	height:10vh;
+	margin-top:1vh;
+	border:1px solid gray;
+	border-radius:5px;
+	cursor:pointer;
+}
+.cell:hover{
+	background-color:#A2A2A2;
+	border:1px solid gray;
+	box-shadow:1px 1px #868686;
+}
+.cell:active{
+	background-color:#EB8282;
+	border:1px solid #E86262;
+	box-shadow:1px 1px #EB8080;
+}

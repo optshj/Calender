@@ -1,0 +1,16 @@
+.form{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	padding-right:1vw;
+	padding-left:1vw;
+}
+.week{
+	background-color: #F9B7CF;
+	color:white;
+	text-indent:0.5vw;
+	font-size:15px;
+	border-radius:10px;
+	width:13.5vw;
+	
+}
