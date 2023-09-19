@@ -5,7 +5,7 @@ function Cells({day}){
 	
 	return(
 		<div className={styles.cell}>
-			{day}
+			<div className={styles.day}>{day}</div>
 		</div>
 	)
 }

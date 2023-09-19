@@ -1,0 +1,7 @@
+.cellform{
+	padding-left:1vw;
+}
+.week{
+	display:flex;
+	flex-direction:row;
+}

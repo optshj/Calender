@@ -1,11 +1,12 @@
 .cell{
 	display:flex;
-	width:13.5vw;
-	height:10vh;
+	width:13vw;
+	height:16vh;
 	margin-top:1vh;
 	border:1px solid gray;
 	border-radius:5px;
 	cursor:pointer;
+	margin-right:0.8vw;
 }
 .cell:hover{
 	background-color:#A2A2A2;
@@ -16,4 +17,8 @@
 	background-color:#EB8282;
 	border:1px solid #E86262;
 	box-shadow:1px 1px #EB8080;
+}
+.day{
+	font-size:16px;
+	padding:6px;
 }

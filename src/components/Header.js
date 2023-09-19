@@ -1,10 +1,10 @@
 import React ,{useContext} from 'react';
 import styles from '../css/Header.module.css';
-import {AiFillCaretLeft,AiFillCaretRight } from "react-icons/ai";
+import { AiFillCaretLeft,AiFillCaretRight } from "react-icons/ai";
 import { DateContext } from '../context';
-import {addMonths,subMonths } from 'date-fns';
+import { addMonths,subMonths } from 'date-fns';
 
-function Header(){
+function Header(){ //제일 위에 있는 월,년도, 이전월, 다음월 표시
 	const {date,setDate} = useContext(DateContext);
 	
 	function onPrev() {
