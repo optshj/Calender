@@ -11,14 +11,29 @@
 .cell:hover{
 	background-color:#A2A2A2;
 	border:1px solid gray;
-	box-shadow:1px 1px #868686;
-}
-.cell:active{
-	background-color:#EB8282;
-	border:1px solid #E86262;
-	box-shadow:1px 1px #EB8080;
+	box-shadow:3px 3px #868686;
+	border:1px solid #A2A2A2;
 }
 .day{
 	font-size:16px;
 	padding:6px;
+	color:#000000;
+}
+.otherDay{
+	font-size:16px;
+	padding:6px;
+	color:#D0D0D0;
+}
+.select{
+	display:flex;
+	width:13vw;
+	height:16vh;
+	margin-top:1vh;
+	border:1px solid gray;
+	border-radius:5px;
+	cursor:pointer;
+	margin-right:0.8vw;
+	background-color:#f3c5b6;
+	border:1px solid #f3c5b6;
+	box-shadow:3px 3px #e39b81;
 }

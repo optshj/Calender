@@ -4,7 +4,8 @@ export const DateContext = createContext();
 
 const DateContextProvider = ({children}) =>{
 	const [date,setDate] = useState(new Date());
-	const value = {date,setDate};
+	const [select,setSelect] = useState('');
+	const value = {date,setDate,select,setSelect};
 	return(
 		<DateContext.Provider value={value}>{children}</DateContext.Provider>
 	)
