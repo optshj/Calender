@@ -1,7 +1,7 @@
 .cell{
 	display:flex;
 	width:13vw;
-	height:16vh;
+	height:13vh;
 	margin-top:1vh;
 	border:1px solid gray;
 	border-radius:5px;
@@ -27,7 +27,7 @@
 .select{
 	display:flex;
 	width:13vw;
-	height:16vh;
+	height:13vh;
 	margin-top:1vh;
 	border:1px solid gray;
 	border-radius:5px;
