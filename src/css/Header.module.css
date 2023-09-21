@@ -10,20 +10,24 @@
 	flex-direction:row;
 }
 .rightform{
-	padding-right:1vw;
 	display:flex;
 	flex-direction:row;
-	font-size:20px;
-	
+	font-size:24px;
 }
 .prev{
 	cursor:pointer;
+	margin-right:1vw;
 }
 .next{
 	cursor:pointer;
+	margin-right:1vw;
 }
-.month{
-	font-size:24px;
+.day{
+	font-size:28px;
 	font-weight: bold;   
 	padding-right:0.5vw;
+}
+.add{
+	cursor:pointer;
+	margin-right:1vw;
 }

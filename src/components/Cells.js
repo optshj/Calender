@@ -5,7 +5,7 @@ import { DateContext } from '../context';
 function Cells({day,inMonth,selected}){
 	const {select,setSelect} = useContext(DateContext);
 	const onClick = () => {
-		setSelect(day);
+		setSelect(day); //선택된 날짜 변경
 	}
 	return(
 		<div className={selected?styles.select:styles.cell} onClick={onClick}>

@@ -22,7 +22,7 @@ function CalenderBody(){
 		for (let i=0;i<7;i++){
 			const inMonth = day.getMonth() === monthStart.getMonth();
 			days.push(
-				<Cells day={day} inMonth={inMonth} selected = {isSameDay(day,select)}/>
+				<Cells day={day} inMonth={inMonth} selected = {isSameDay(day,select)}/> //선택된 항목의 날짜가 해당 항목의 날짜랑 같은지?
 			)
 			day = addDays(day,1);
 		}
