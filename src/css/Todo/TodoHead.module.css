@@ -1,0 +1,27 @@
+.form{
+	border-bottom : 1px solid #e9ecef;
+	display:flex;
+	flex-direction:row;
+}
+.date{
+	margin-left:1vw;
+	display:flex;
+	flex-direction:column;
+}
+.selectday{
+	margin-top:1vh;
+	font-size:5vh;
+	color: #343a40;
+}
+.week{
+	color:#a0a0a0;
+	margin-bottom:2vh;
+}
+.exit{
+	position:absolute;
+	top:2%;
+	right:4%;
+	font-size:20px;
+	cursor:pointer;	
+	color:#a0a0a0;
+}

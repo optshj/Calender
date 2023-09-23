@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import styles from '../css/Cells.module.css';
+import styles from '../css/Calender/Cells.module.css';
 import { DateContext } from '../context';
 
 function Cells({day,inMonth,selected}){

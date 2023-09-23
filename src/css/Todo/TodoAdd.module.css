@@ -1,0 +1,45 @@
+input{
+	padding-top:12px;
+	font-size:18px;
+	width:30vw;
+	border: 1px solid #e9ecef;
+	outline:none;
+	border-radius:6px;
+}
+.CircleBtn{
+	background:#38d9a9;
+	cursor:pointer;
+	border: none;
+	width:80px;
+	height:80px;
+	display:flex;
+	border-radius:50%;
+	align-items:center;
+	justify-content:center;
+	left:50%;
+	position:absolute;
+	color:white;
+	font-size:50px;
+	transform: translate(-50%, 50%);
+	bottom:0px;
+	transition: 0.125s all ease-in;
+}
+.CircleBtnActive{
+	background: #ff6b6b;
+	cursor:pointer;
+	border: none;
+	width:80px;
+	height:80px;
+	display:flex;
+	border-radius:50%;
+	align-items:center;
+	justify-content:center;
+	left:50%;
+	position:absolute;
+	color:white;
+	font-size:50px;
+	transform: translate(-50%, 50%);
+	bottom:0px;
+	transition: 0.125s all ease-in;
+	transform: translate(-50%, 50%) rotate(45deg);
+}
