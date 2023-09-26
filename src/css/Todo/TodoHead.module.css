@@ -4,9 +4,10 @@
 	flex-direction:row;
 }
 .date{
-	margin-left:1vw;
+	margin-left:1.5vw;
 	display:flex;
 	flex-direction:column;
+	font-weight:bold;
 }
 .selectday{
 	margin-top:1vh;
@@ -19,7 +20,7 @@
 }
 .exit{
 	position:absolute;
-	top:2%;
+	top:3%;
 	right:4%;
 	font-size:20px;
 	cursor:pointer;	

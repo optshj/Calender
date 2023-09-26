@@ -4,7 +4,7 @@ import { DateContext } from '../../context';
 import { AiOutlineClose } from "react-icons/ai";
 
 function TodoHead({setModalIsOpen}){
-	const {date,setDate,select,setSelect} = useContext(DateContext);
+	const {select} = useContext(DateContext);
 	
 	//날짜 표시를 위한 설정
 	const week = ['일요일','월요일','화요일','수요일','목요일','금요일','토요일']

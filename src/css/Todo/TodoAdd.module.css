@@ -1,7 +1,8 @@
 input{
 	padding-top:12px;
 	font-size:18px;
-	width:30vw;
+	width:100%;
+	bottom:10%;
 	border: 1px solid #e9ecef;
 	outline:none;
 	border-radius:6px;
@@ -16,12 +17,12 @@ input{
 	border-radius:50%;
 	align-items:center;
 	justify-content:center;
-	left:50%;
+	left:87%;
+	bottom:10%;
 	position:absolute;
 	color:white;
 	font-size:50px;
 	transform: translate(-50%, 50%);
-	bottom:0px;
 	transition: 0.125s all ease-in;
 }
 .CircleBtnActive{
@@ -34,12 +35,12 @@ input{
 	border-radius:50%;
 	align-items:center;
 	justify-content:center;
-	left:50%;
+	left:87%;
+	bottom:10%;
 	position:absolute;
 	color:white;
 	font-size:50px;
 	transform: translate(-50%, 50%);
-	bottom:0px;
 	transition: 0.125s all ease-in;
 	transform: translate(-50%, 50%) rotate(45deg);
 }

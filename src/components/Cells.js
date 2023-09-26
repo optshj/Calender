@@ -3,7 +3,7 @@ import styles from '../css/Calender/Cells.module.css';
 import { DateContext } from '../context';
 
 function Cells({day,inMonth,selected}){
-	const {select,setSelect} = useContext(DateContext);
+	const {setSelect} = useContext(DateContext);
 	const onClick = () => {
 		setSelect(day); //선택된 날짜 변경
 	}
