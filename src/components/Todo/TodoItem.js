@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import styles from '../../css/Todo/TodoItem.module.css';
 import { MdDone, MdDelete } from 'react-icons/md';
 import { AiOutlineCheck , AiOutlineClose,AiFillEdit } from "react-icons/ai";
-import {useTodoDispatch,useTodoNextId} from '../../context';
+import { useTodoDispatch,useTodoNextId } from '../../context';
 
 
 
@@ -24,12 +24,12 @@ function TodoItem({id,text,done}){
 	}
 	const onCheck = () => {
 		if (value)
-		setEdit(false)
+		setEdit(false);
 	}
 	const onSubmit = e => {
 		e.preventDefault();
 		if (value){
-			setEdit(false)
+			setEdit(false);
 		}
 	}
 	

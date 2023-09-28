@@ -7,6 +7,7 @@
 	border-radius:5px;
 	cursor:pointer;
 	margin-right:0.8vw;
+	flex-direction:column;
 }
 .cell:hover{
 	background-color:#A2A2A2;
@@ -26,6 +27,7 @@
 }
 .select{
 	display:flex;
+	flex-direction:column;
 	width:13vw;
 	height:13vh;
 	margin-top:1vh;
@@ -33,7 +35,9 @@
 	border-radius:5px;
 	cursor:pointer;
 	margin-right:0.8vw;
-	background-color:#f3c5b6;
-	border:1px solid #f3c5b6;
-	box-shadow:3px 3px #e39b81;
+	border:1px solid #868686;
+	box-shadow:3px 3px #868686;;
+}
+.select:hover{
+	background-color:#A2A2A2;
 }

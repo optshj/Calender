@@ -1,7 +1,10 @@
+.form{
+	padding-left:1vw;
+}
 input{
 	padding-top:12px;
-	font-size:18px;
-	width:95%;
+	font-size:21px;
+	width:98%;
 	bottom:10%;
 	border: 1px solid #e9ecef;
 	outline:none;

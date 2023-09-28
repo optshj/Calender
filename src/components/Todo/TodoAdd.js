@@ -1,16 +1,22 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import styles from '../../css/Todo/TodoAdd.module.css';
 import { MdAdd } from 'react-icons/md';
-import {useTodoDispatch,useTodoNextId} from '../../context';
-import {DateContext} from "../../context";
+import { useTodoDispatch,useTodoNextId } from '../../context';
+import { DateContext } from "../../context";
 
 function TodoAdd(){
 	
 	const [open,setOpen] = useState(false);
 	const [value,setValue] = useState('');
-	const {select,setSelect} = useContext(DateContext);
+	const {select} = useContext(DateContext);
 	const dispatch = useTodoDispatch();
 	const nextId = useTodoNextId();
+	const randomColor = () => {
+		const color_r = Math.floor(Math.random() * 127 + 128).toString(16);
+		const color_g = Math.floor(Math.random() * 127 + 128).toString(16);
+		const color_b = Math.floor(Math.random() * 127 + 128).toString(16);
+  		return `#${color_r+color_g+color_b}`;
+	}
 	
 	const onAdd = () =>{
 		if (open){
@@ -33,7 +39,8 @@ function TodoAdd(){
 				id:nextId.current,
 				date:select,
 				text:value,
-				done:false
+				done:false,
+				color:randomColor()
 				}
 			});
 		}
@@ -52,7 +59,7 @@ function TodoAdd(){
 				 </div>
 			</form>)
 			 }
-			<div open={open} onClick={onAdd} className={open ? styles.CircleBtnActive : styles.CircleBtn}><MdAdd/></div>
+			<div onClick={onAdd} className={open ? styles.CircleBtnActive : styles.CircleBtn}><MdAdd/></div>
 		</div>
 	)
 }
