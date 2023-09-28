@@ -1,8 +1,10 @@
 import React,{createContext, useState, useReducer, useContext, useRef  } from 'react';
 
+
+//날짜 Context
 export const DateContext = createContext();
 
-const DateContextProvider = ({children}) =>{
+const DateContextProvider = ({children}) =>{ 
 	const [date,setDate] = useState(new Date());
 	const [select,setSelect] = useState(new Date());
 	const value = {date,setDate,select,setSelect};
@@ -13,6 +15,8 @@ const DateContextProvider = ({children}) =>{
 export default DateContextProvider;
 
 
+
+// Todo Context
 const initialTodos = [];
 
 function todoReducer(state, action) {

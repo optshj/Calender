@@ -34,8 +34,8 @@ function TodoAdd(){
 				date:select,
 				text:value,
 				done:false
-			}
-		});
+				}
+			});
 		}
 		nextId.current += 1;
 		setOpen(false); // 추가 닫기

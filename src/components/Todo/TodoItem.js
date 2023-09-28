@@ -24,10 +24,13 @@ function TodoItem({id,text,done}){
 	}
 	const onCheck = () => {
 		if (value)
-		setEdit(false)}
+		setEdit(false)
+	}
 	const onSubmit = e => {
 		e.preventDefault();
-		if (value){setEdit(false)}
+		if (value){
+			setEdit(false)
+		}
 	}
 	
 	

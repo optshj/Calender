@@ -4,14 +4,15 @@ import TodoItem from './TodoItem';
 import { useTodoState } from '../../context';
 import { DateContext } from '../../context';
 
-function TodoList(){
+function TodoList({selectDay}){
 	const todos = useTodoState();
 	const {select} = useContext(DateContext);
+
 	
 	return(
 		<div className={styles.form}>
 			{todos.map(todo=>(
-				todo.date === select
+				todo.date.toDateString() === select.toDateString()
 				? <TodoItem 
 					  id={todo.id}
 					  text={todo.text}
