@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React from 'react';
 import styles from '../css/Calender/Schedule.module.css';
 import { useTodoState } from '../context';
 

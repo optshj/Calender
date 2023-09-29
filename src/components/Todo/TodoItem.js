@@ -15,7 +15,7 @@ function TodoItem({id,text,done}){
 	const onToggle = () => dispatch({type:"TOGGLE",id});
 	const onRemove = () => dispatch({type:"REMOVE",id});
 	const onModify = () => {
-		setValue('');
+		setValue("");
 		setEdit(true);
 	}
 	const onCancel = () => {
@@ -30,6 +30,8 @@ function TodoItem({id,text,done}){
 		e.preventDefault();
 		if (value){
 			setEdit(false);
+			dispatch({type:"MODIFY",id,value:value});
+
 		}
 	}
 	

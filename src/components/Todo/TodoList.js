@@ -8,7 +8,6 @@ function TodoList({selectDay}){
 	const todos = useTodoState();
 	const {select} = useContext(DateContext);
 
-	
 	return(
 		<div className={styles.form}>
 			{todos.map(todo=>(
