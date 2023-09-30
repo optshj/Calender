@@ -9,7 +9,7 @@ function Schedule({day}){
 		<div className={styles.form}>
 			{todos.map(todo=>(
 				todo.date.toDateString() === day.toDateString()
-				? <div className={styles.schedule} style={{'background-color':todo.color}}>{todo.text}</div>
+				? <div className={todo.done?styles.done:styles.schedule} style={{'backgroundColor':todo.color}} key={todo.id}>{todo.text}</div>
 					:null))}
 		</div>
 	)

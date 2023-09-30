@@ -16,6 +16,7 @@ function TodoList({selectDay}){
 					  id={todo.id}
 					  text={todo.text}
 					  done={todo.done}
+					  key={todo.id}
 					  />:null))}
 		</div>
 	)

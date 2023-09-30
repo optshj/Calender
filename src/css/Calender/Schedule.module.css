@@ -4,3 +4,10 @@
 	border-radius:5px;
 	margin-bottom:2px;
 }
+.done{
+	padding-left:4px;
+	color:#ced4da;
+	border-radius:5px;
+	margin-bottom:2px;
+	text-decoration:line-through;
+}
