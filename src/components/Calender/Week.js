@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../css/Calender/Week.module.css';
+import styles from '../../css/Calender/Week.module.css';
 
 function Week(){ //일주일 표시
 	const weeks = [];

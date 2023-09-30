@@ -1,6 +1,6 @@
 import React,{ useContext,useState } from 'react';
-import styles from '../css/Calender/CalenderBody.module.css';
-import { DateContext } from '../context';
+import styles from '../../css/Calender/CalenderBody.module.css';
+import { DateContext } from '../../context';
 import Header from './Header';
 import Cells from './Cells';
 import Week from './Week';

@@ -1,13 +1,17 @@
 .schedule{
+	display:flex;
 	padding-left:4px;
 	color:white;
 	border-radius:5px;
 	margin-bottom:2px;
+	flex-direction:row;
 }
 .done{
+	display:flex;
 	padding-left:4px;
 	color:#ced4da;
 	border-radius:5px;
 	margin-bottom:2px;
 	text-decoration:line-through;
+	flex-direction:row;
 }

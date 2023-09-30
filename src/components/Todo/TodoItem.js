@@ -13,7 +13,7 @@ function TodoItem({id,text,done}){
 	
 	
 	const onToggle = () => dispatch({type:"TOGGLE",id});
-	const onRemove = () => dispatch({type:"REMOVE",id});
+	const onDelete = () => dispatch({type:"REMOVE",id});
 	const onModify = () => {
 		setValue("");
 		setEdit(true);
@@ -51,7 +51,7 @@ function TodoItem({id,text,done}){
 				<>
 					<div className={done ? styles.donetext : styles.text}>{value}</div>
 					<div className={styles.modify} onClick={onModify}><AiFillEdit/></div>
-					<div className={styles.delete} onClick={onRemove}><MdDelete/></div>
+					<div className={styles.delete} onClick={onDelete}><MdDelete/></div>
 				</>
 				)
 			 }

@@ -1,5 +1,4 @@
 .delete{
-	display:flex;
 	cursor:pointer;
 	color:#e9ecef;
 	display:none;
@@ -57,7 +56,6 @@
 	font-size:24px;
 }
 .modify{
-	display:flex;
 	display:none;
 	color:#e9ecef;
 	cursor:pointer;

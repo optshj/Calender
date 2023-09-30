@@ -1,0 +1,9 @@
+.delete{
+	margin-left:auto;
+	margin-right:0.3vw;
+	display:none;
+	font-size:15px;
+}
+.form:hover .delete{
+	display:initial;
+}

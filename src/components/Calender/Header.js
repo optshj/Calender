@@ -1,9 +1,9 @@
 import React ,{useContext} from 'react';
-import styles from '../css/Calender/Header.module.css';
-import TodoModal from './Todo/TodoModal';
+import styles from '../../css/Calender/Header.module.css';
+import TodoModal from './../Todo/TodoModal';
 import { AiFillCaretLeft,AiFillCaretRight } from "react-icons/ai";
 import { BsPlusLg } from "react-icons/bs";
-import { DateContext } from '../context';
+import { DateContext } from '../../context';
 import { addMonths,subMonths } from 'date-fns';
 
 function Header({modalIsOpen,setModalIsOpen}){ //제일 위에 있는 월,년도, 이전월, 다음월 표시
