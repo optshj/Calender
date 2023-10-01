@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../css/Btn/DeleteBtn.module.css';
 import { MdDelete } from 'react-icons/md';
-import {useTodoDispatch} from '../../context';
+import { useTodoDispatch } from '../../context';
 
 function DeleteBtn({id}){
 	const dispatch = useTodoDispatch();

@@ -12,7 +12,7 @@ function Schedule({day}){
 				todo.date.toDateString() === day.toDateString()
 				? <div className={todo.done?styles.done:styles.schedule} style={{'backgroundColor':todo.color}} key={todo.id}>
 					{todo.text}
-					<DeleteBtn id={todo.id}/>
+					<DeleteBtn className={styles.delete} id={todo.id}/>
 				</div>
 					:null))}
 		</div>

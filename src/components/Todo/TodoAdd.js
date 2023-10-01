@@ -8,6 +8,8 @@ function TodoAdd(){
 	
 	const [open,setOpen] = useState(false);
 	const [value,setValue] = useState('');
+	const [warn,setWarn] = useState(false);
+	
 	const {select} = useContext(DateContext);
 	const dispatch = useTodoDispatch();
 	const nextId = useTodoNextId();
@@ -24,6 +26,7 @@ function TodoAdd(){
 		}
 		else {
 			setOpen(true); // 닫혀있으면 열기
+			setWarn(false); // 경고 초기화
 		}
 	}
 	const onChange= (e) =>{
@@ -31,8 +34,11 @@ function TodoAdd(){
 	}
 	const onSubmit = (e) => {
 		e.preventDefault();
-		
-		if (value){
+		if (value.length > 10){
+			setWarn(true); // 경고문 출력
+			setValue('');
+		}
+		else if (value){
 			dispatch({
 			type:"CREATE",
 			todo:{
@@ -43,10 +49,10 @@ function TodoAdd(){
 				color:randomColor()
 				}
 			});
+			nextId.current += 1;
+			setOpen(false); // 추가 닫기
+			setValue(''); // 내용 초기화
 		}
-		nextId.current += 1;
-		setOpen(false); // 추가 닫기
-		setValue(''); // 내용 초기화
 	}
 	
 	
@@ -55,7 +61,8 @@ function TodoAdd(){
 			{open &&(
 			<form onSubmit={onSubmit}>
 				<div className={styles.form}>
-					<input autoFocus placeholder= "일정을 입력 후, Enter 를 누르세요" onChange={onChange} value = {value}/>
+					<div className={warn?styles.warn:styles.label}>{warn? '10자 이내로 입력해주세요.' : '일정을 입력 후, Enter 를 누르세요.(10자 이내)'}</div>
+					<input autoFocus onChange={onChange} value = {value}/>
 				 </div>
 			</form>)
 			 }
