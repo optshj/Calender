@@ -6,11 +6,10 @@ import { useTodoDispatch } from '../../context';
 
 
 
-function TodoItem({id,text,done}){
+function TodoItem({id,text,done,color,date}){
 	const dispatch = useTodoDispatch();
 	const [value,setValue] = useState(text);
 	const [edit,setEdit] = useState(false);
-	
 	
 	const onToggle = () => dispatch({type:"TOGGLE",id});
 	const onDelete = () => dispatch({type:"REMOVE",id});
@@ -31,6 +30,14 @@ function TodoItem({id,text,done}){
 		if (value){
 			setEdit(false);
 			dispatch({type:"MODIFY",id,value:value});
+			const todo = {
+				id:id,
+				date:date,
+				text:value,
+				done:done,
+				color:color
+			}
+			window.localStorage.setItem(id,JSON.stringify(todo));
 
 		}
 	}

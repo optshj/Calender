@@ -14,8 +14,10 @@ function TodoList({selectDay}){
 				todo.date.toDateString() === select.toDateString()
 				? <TodoItem 
 					  id={todo.id}
+					  date={todo.date}
 					  text={todo.text}
 					  done={todo.done}
+					  color={todo.color}
 					  key={todo.id}
 					  />:null))}
 		</div>

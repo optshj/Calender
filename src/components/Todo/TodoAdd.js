@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
 import styles from '../../css/Todo/TodoAdd.module.css';
 import { MdAdd } from 'react-icons/md';
-import { useTodoDispatch,useTodoNextId } from '../../context';
+import { useTodoDispatch, useTodoNextId } from '../../context';
 import { DateContext } from "../../context";
 
 function TodoAdd(){
@@ -39,16 +39,15 @@ function TodoAdd(){
 			setValue('');
 		}
 		else if (value){
-			dispatch({
-			type:"CREATE",
-			todo:{
+			const todo = {
 				id:nextId.current,
 				date:select,
 				text:value,
 				done:false,
 				color:randomColor()
-				}
-			});
+			}
+			window.localStorage.setItem(nextId.current,JSON.stringify(todo)); // 로컬스토리지에 정보 저장
+			dispatch({type:"CREATE",todo});
 			nextId.current += 1;
 			setOpen(false); // 추가 닫기
 			setValue(''); // 내용 초기화

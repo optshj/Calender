@@ -1,11 +1,15 @@
 import React from 'react';
 import styles from '../../css/Calender/Schedule.module.css';
-import { useTodoState } from '../../context';
+import { useTodoState,useTodoNextId} from '../../context';
 import DeleteBtn from '../Btn/DeleteBtn';
 
 function Schedule({day}){
-	const todos = useTodoState();
-
+	let todos = [];
+	const nextId = useTodoNextId();
+	for (let i=1;i<=nextId;i++){
+		todos.push(JSON.parse(localStorage.getItem(i)));
+	}
+	
 	return(
 		<div className={styles.form}>
 			{todos.map(todo=>(
