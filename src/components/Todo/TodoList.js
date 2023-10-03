@@ -11,7 +11,7 @@ function TodoList({selectDay}){
 	return(
 		<div className={styles.form}>
 			{todos.map(todo=>(
-				todo.date.toDateString() === select.toDateString()
+				todo.date === select.toDateString()
 				? <TodoItem 
 					  id={todo.id}
 					  date={todo.date}

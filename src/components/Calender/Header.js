@@ -1,8 +1,7 @@
 import React ,{useContext} from 'react';
 import styles from '../../css/Calender/Header.module.css';
 import TodoModal from './../Todo/TodoModal';
-import { AiFillCaretLeft,AiFillCaretRight } from "react-icons/ai";
-import { BsPlusLg } from "react-icons/bs";
+import { AiFillCaretLeft,AiFillCaretRight,AiOutlineBars } from "react-icons/ai";
 import { DateContext } from '../../context';
 import { addMonths,subMonths } from 'date-fns';
 
@@ -27,7 +26,7 @@ function Header({modalIsOpen,setModalIsOpen}){ //제일 위에 있는 월,년도
 				</div>
 
 				<div className={styles.rightform}>
-					<div className={styles.add} onClick={onAdd}><BsPlusLg/></div>
+					<div className={styles.add} onClick={onAdd}><AiOutlineBars/></div>
 					<div className={styles.prev} onClick={onPrev}><AiFillCaretLeft/></div>
 					<div className={styles.next} onClick={onNext}><AiFillCaretRight/></div>
 				</div>

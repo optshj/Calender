@@ -15,3 +15,28 @@
 	text-decoration:line-through;
 	flex-direction:row;
 }
+
+.notcheckcircle{
+	margin-top:3px;
+	display:flex;
+	width:12px;
+	height:12px;
+	border-radius:12px;
+	border:1px solid #ced4da;
+	justify-content:center;
+	align-items:center;
+	cursor:pointer;
+}
+.checkcircle{
+	margin-top:3px;
+	color:#38d9a9;
+	display:flex;
+	width:12px;
+	height:12px;
+	border-radius:12px;
+	border:1px solid #38d9a9;
+	justify-content:center;
+	align-items:center;
+	cursor:pointer;
+	font-size:24px;
+}

@@ -41,14 +41,13 @@ function TodoAdd(){
 		else if (value){
 			const todo = {
 				id:nextId.current,
-				date:select,
+				date:select.toDateString(),
 				text:value,
 				done:false,
 				color:randomColor()
 			}
-			window.localStorage.setItem(nextId.current,JSON.stringify(todo)); // 로컬스토리지에 정보 저장
-			dispatch({type:"CREATE",todo});
 			nextId.current += 1;
+			dispatch({type:"CREATE",todo});
 			setOpen(false); // 추가 닫기
 			setValue(''); // 내용 초기화
 		}
