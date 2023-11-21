@@ -1,8 +1,10 @@
 import React ,{useContext} from 'react';
-import styles from '../../css/Calender/Header.module.css';
-import TodoModal from './../Todo/TodoModal';
-import { AiFillCaretLeft,AiFillCaretRight,AiOutlineBars } from "react-icons/ai";
+import style from '../../css/Calender/Header.module.css';
 import { DateContext } from '../../context';
+
+import TodoModal from './../Todo/TodoModal';
+
+import { AiFillCaretLeft,AiFillCaretRight,AiOutlineBars } from "react-icons/ai";
 import { addMonths,subMonths } from 'date-fns';
 
 function Header({modalIsOpen,setModalIsOpen}){ //제일 위에 있는 월,년도, 이전월, 다음월 표시
@@ -20,15 +22,15 @@ function Header({modalIsOpen,setModalIsOpen}){ //제일 위에 있는 월,년도
 	
 	return(
 		<div >
-			<div className={styles.form}>
-				<div className={styles.leftform}>
-					<div className={styles.day}>{date.getFullYear()}.{date.getMonth()+1}월</div>
+			<div className={style.form}>
+				<div className={style.leftform}>
+					<div className={style.day}>{date.getFullYear()}.{date.getMonth()+1}월</div>
 				</div>
 
-				<div className={styles.rightform}>
-					<div className={styles.add} onClick={onAdd}><AiOutlineBars/></div>
-					<div className={styles.prev} onClick={onPrev}><AiFillCaretLeft/></div>
-					<div className={styles.next} onClick={onNext}><AiFillCaretRight/></div>
+				<div className={style.rightform}>
+					<div className={style.add} onClick={onAdd}><AiOutlineBars/></div>
+					<div className={style.prev} onClick={onPrev}><AiFillCaretLeft/></div>
+					<div className={style.next} onClick={onNext}><AiFillCaretRight/></div>
 				</div>
 			</div>
 			

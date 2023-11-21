@@ -1,10 +1,11 @@
 import React,{ useContext,useState } from 'react';
-import styles from '../../css/Calender/CalenderBody.module.css';
+import style from '../../css/Calender/CalenderBody.module.css';
 import { DateContext } from '../../context';
+import { startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameDay} from 'date-fns';
+
 import Header from './Header';
 import Cells from './Cells';
 import Week from './Week';
-import { startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameDay} from 'date-fns';
 
 function CalenderBody(){
 	const {date,select} = useContext(DateContext); //날짜 전역변수
@@ -28,18 +29,23 @@ function CalenderBody(){
 			day = addDays(day,1);
 		}
 		weeks.push(
-			<div className={styles.week}>
+			<div className={style.week}>
 				{days}
 			</div>	
 		);
 		days = [];
 	}
 	return(
-		<div>
-			<Header modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
-			<Week/>
-			<div className={styles.cellform}>
-				{weeks}
+		<div className={style.container}>
+			<div className={style.leftform}>
+				<Header modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
+				<Week/>
+				<div className={style.cellform}>
+					{weeks}
+				</div>
+			</div>
+			<div className={style.rightform}>
+				<div className={style.title}>TODO-LIST</div>
 			</div>
 		</div>
 	)
