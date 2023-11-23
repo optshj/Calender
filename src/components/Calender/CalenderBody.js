@@ -1,4 +1,4 @@
-import React,{ useContext,useState } from 'react';
+import React,{ useContext } from 'react';
 import style from '../../css/Calender/CalenderBody.module.css';
 import { DateContext } from '../../context';
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameDay} from 'date-fns';
@@ -6,10 +6,10 @@ import { startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameDay} f
 import Header from './Header';
 import Cells from './Cells';
 import Week from './Week';
+import TodoBody from '../Todo/TodoBody';
 
 function CalenderBody(){
 	const {date,select} = useContext(DateContext); //날짜 전역변수
-	const [modalIsOpen,setModalIsOpen] = useState(false);
 	
 	const monthStart = startOfMonth(date); //달력에서 월의 시작하는 날짜
 	const monthEnd = endOfMonth(date); //달력에서 월의 끝나는 날짜
@@ -38,14 +38,14 @@ function CalenderBody(){
 	return(
 		<div className={style.container}>
 			<div className={style.leftform}>
-				<Header modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
+				<Header/>
 				<Week/>
 				<div className={style.cellform}>
 					{weeks}
 				</div>
 			</div>
 			<div className={style.rightform}>
-				<div className={style.title}>TODO-LIST</div>
+				<TodoBody/>
 			</div>
 		</div>
 	)

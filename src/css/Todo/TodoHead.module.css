@@ -1,6 +1,7 @@
 .form{
 	border-bottom : 1px solid #e9ecef;
 	display:flex;
+	width:100%;
 	flex-direction:row;
 }
 .date{
@@ -17,12 +18,4 @@
 .week{
 	color:#a0a0a0;
 	margin-bottom:2vh;
-}
-.exit{
-	position:absolute;
-	top:3%;
-	right:4%;
-	font-size:20px;
-	cursor:pointer;	
-	color:#a0a0a0;
 }

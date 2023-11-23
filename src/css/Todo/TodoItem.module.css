@@ -60,6 +60,7 @@
 	color:#e9ecef;
 	cursor:pointer;
 	font-size:24px;
+	margin-left:10px;
 	padding-right:5px;
 }
 .form:hover .modify{
@@ -70,7 +71,7 @@
 }
 .modifyinput{
 	display:flex;
-	font-size:21px;
+	font-size:20px;
 	border-radius:6px;
 }
 .cancel:hover{

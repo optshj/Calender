@@ -1,6 +1,6 @@
 .cell{
 	display:block;
-	width:14vh;
+	width:16vh;
 	height:14vh;
 	border:1px solid gray;
 	border-radius:5px;
@@ -25,7 +25,7 @@
 .select{
 	display:flex;
 	flex-direction:column;
-	width:14vh;
+	width:16vh;
 	height:14vh;
 	border:1px solid gray;
 	border-radius:5px;

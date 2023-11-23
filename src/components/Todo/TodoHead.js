@@ -1,9 +1,8 @@
 import React ,{useContext} from 'react';
 import styles from '../../css/Todo/TodoHead.module.css';
 import { DateContext } from '../../context';
-import { AiOutlineClose } from "react-icons/ai";
 
-function TodoHead({setModalIsOpen}){
+function TodoHead(){
 	const {select} = useContext(DateContext);
 	
 	//날짜 표시를 위한 설정
@@ -19,7 +18,6 @@ function TodoHead({setModalIsOpen}){
 				<div className={styles.selectday}>{selectYear}년 {selectMonth+1}월 {selectDate}일</div>
 				<div className={styles.week}>{week[selectDay]}</div>
 			</div>
-			<div className={styles.exit} onClick={() => setModalIsOpen(false)}><AiOutlineClose/></div>
 		</div>
 	)
 }
