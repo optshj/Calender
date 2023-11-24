@@ -14,17 +14,18 @@
 }
 .day{
 	font-size:16px;
-	padding:6px;
+	padding:2px;
 	color:#000000;
 }
 .otherDay{
 	font-size:16px;
-	padding:6px;
+	padding:2px;
 	color:#D0D0D0;
 }
 .select{
 	display:flex;
 	flex-direction:column;
+	background-color:#A2A2A2;
 	width:16vh;
 	height:14vh;
 	border:1px solid gray;
