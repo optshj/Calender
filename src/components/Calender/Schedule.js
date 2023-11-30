@@ -4,7 +4,7 @@ import { useTodoState } from '../../context';
 
 function Schedule({day}){
 	const todos = useTodoState();
-	const maxSchedule = 4;
+	const maxShow = 4; //최대로 보여줄 스케줄 수
 	const todayTodo = todos.filter(todo=>(todo.date === day.toDateString()));
 	const schedules = todayTodo.map(todo=>(<div className={todo.done ? style.done:style.schedule} style={{'backgroundColor':todo.color}} key={todo.id}>
 					{todo.text}</div>));
@@ -12,7 +12,7 @@ function Schedule({day}){
 	return(
 		<div className={style.form}>
 			{schedules.slice(0,4)}
-			<div className={schedules.length > maxSchedule ? style.overschedule : style.hide}>+{schedules.length-maxSchedule}</div>
+			<div className={schedules.length > maxShow ? style.overschedule : style.hide}>+{schedules.length-maxShow}</div>
 		</div>
 	)
 }

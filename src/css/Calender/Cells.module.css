@@ -2,24 +2,22 @@
 	display:block;
 	width:16vh;
 	height:14vh;
-	border:1px solid gray;
+	border:1px solid #A2A2A2;
 	border-radius:5px;
 	cursor:pointer;
 }
 .cell:hover{
 	background-color:#A2A2A2;
-	border:1px solid gray;
-	box-shadow:3px 3px #868686;
 	border:1px solid #A2A2A2;
 }
 .day{
 	font-size:16px;
-	padding:2px;
+	padding:6px;
 	color:#000000;
 }
 .otherDay{
 	font-size:16px;
-	padding:2px;
+	padding:6px;
 	color:#D0D0D0;
 }
 .select{
@@ -32,7 +30,6 @@
 	border-radius:5px;
 	cursor:pointer;
 	border:1px solid #868686;
-	box-shadow:3px 3px #868686;;
 }
 .select:hover{
 	background-color:#A2A2A2;
